@@ -1,0 +1,16 @@
+#container p, h2 {
+    text-align: center;
+}
+
+body {   
+    margin: auto;
+    text-align: center;
+    font-family: 'Nunito', 'Open Sans';
+}
+
+.button {
+    line-height: 40px;
+    text-align: center;
+    width: 300px;
+    font-weight: bold;
+}

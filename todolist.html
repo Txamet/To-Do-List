@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List Task Manager by Jaume Blanco González</title>
+    <link href="./css/estilos.css" rel="stylesheet">
+</head>
+<body>
+    <h2>To-Do List Task Manager</h2>
+    <p id = "display_list"></p>
+    <p id = "add_task" hidden>Enter the new task to add: <input id = "new_task" type = "text"> <button onclick = "addTaskUI()">Add</button>  <button onclick = "cancel()">Cancel</button></p>
+    <p id = "complete_task" hidden>Enter the number of the completed task : <input id = "check_task" type = "number"> <button onclick = "completeTaskUI()">Check</button>  <button onclick = "cancel()">Cancel</button></p>
+    <p id = "delete_task" hidden>Enter the number of the task to delete: <input id = "erase_task" type = "number"> <button onclick = "deleteTaskUI()">Delete</button>  <button onclick = "cancel()">Cancel</button></p>
+    <p id = "result"></p>
+    
+    <hr>
+    <div id = "interface">
+    <button onclick = "showAddTaskUI()" class="button" >Add a task</button><br><br>
+    <button onclick = "showDeleteTaskUI()" class="button" >Delete a task</button><br><br>
+    <button onclick = "showCompleteTaskUI()" class="button" >Check a task as completed</button><br><br>
+    <button onclick = "showToDoListUI()" class="button" >Display To Do List</button><br><br>
+    </div>
+    <script src = "./dist/todolistUI.js"></script>
+</body>
+</html>
