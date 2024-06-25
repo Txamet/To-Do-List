@@ -28,4 +28,4 @@ Parte 2: Crear una CLI para comprobar la funcionalidad de la aplicación
 Parte 3: Crear un front-end para comprobar la funcionalidad de la aplicación
 - archivos "todolist.html" en el directorio raíz y "todolistUI.ts" en la carpeta "/src".
 - Incluida carpeta "/css" para formato del front-end en el archivo "estilos.css".
-- Pulsar el botón en pantalla y seguir las instrucciones.
+- Pulsar el botón en pantalla de operación deseada y seguir las instrucciones.
