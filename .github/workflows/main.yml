@@ -1,0 +1,28 @@
+name: Testing uploaded branch
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+      - uses: actions/checkout@v4.1.7
+
+      - name: Config environtment
+        run: |
+          npm init -y
+          npm install typescript -D
+          npm i -D ts-node
+          npm i -D jest typescript ts-jest @types/jest
+          npm install --save inquirer@^8.0.0
+          npm i chalk@4.1.2
+          npm i figlet
+            
+      - name: Test with Jest
+        run: npm test 
+
+      
