@@ -22,15 +22,15 @@ function addTaskCLI(task: string) {
       console.log(chalk.red("Error: No task added, please try again."));
 
     } else {
-      toDoList.push(new Task(task));
+      toDoListCLI.push(new TaskCLI(task));
       console.log(chalk.italic.green(`The task "${task}" has been added to the To Do List`));;
     };  
 };
 
 function displayAllTasksCLI() {
-  if (toDoList.length > 0) {
+  if (toDoListCLI.length > 0) {
     console.log(chalk.magenta("------TO DO LIST------"));
-    toDoList.forEach((task, index) => {
+    toDoListCLI.forEach((task, index) => {
       let taskStatus: string = (task.completed === false) ? "" : "[completed]";
       console.log((`${chalk.yellow(index + 1)}: ${chalk.white(task.task)}  ${chalk.green(taskStatus)}`));
     });
@@ -41,26 +41,26 @@ function displayAllTasksCLI() {
 };
 
 function completeTaskCLI(index: number) {
-    if (index >= toDoList.length || isNaN(index) || index < 0 || index === undefined) {
+    if (index >= toDoListCLI.length || isNaN(index) || index < 0 || index === undefined) {
       console.log(chalk.red("Error: invalid choice, please try again"));
 
-    } else if (toDoList[index].completed === false) {
-      toDoList[index].completed = true; 
-      console.log(chalk.italic.green(`Task "${toDoList[index].task}" completed. Well done!`)); 
+    } else if (toDoListCLI[index].completed === false) {
+      toDoListCLI[index].completed = true; 
+      console.log(chalk.italic.green(`Task "${toDoListCLI[index].task}" completed. Well done!`)); 
 
     } else {
-      console.log(chalk.italic.red(`Task "${toDoList[index].task}" was already completed.`));
+      console.log(chalk.italic.red(`Task "${toDoListCLI[index].task}" was already completed.`));
     }; 
 };
 
 function deleteTaskCLI(index: number) {
-    if (index >= toDoList.length || isNaN(index) || index < 0 || index === undefined) {
+    if (index >= toDoListCLI.length || isNaN(index) || index < 0 || index === undefined) {
       console.log(chalk.red("Error: invalid choice, please try again"));
 
     } else {
-      let deletedTask = toDoList[index].task;
+      let deletedTask = toDoListCLI[index].task;
       console.log(chalk.italic.green(`The task "${deletedTask}" has been deleted from the To Do List`));
-      toDoList.splice(index, 1);
+      toDoListCLI.splice(index, 1);
     }; 
 }
 
